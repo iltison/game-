@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace game_HOT
 {
@@ -16,11 +17,15 @@ namespace game_HOT
         PictureBox[] box;
         int[] cards_number;
         bool flip_card = true;
-
+        About about;
+        int score;
+        int para;
+        string record = File.ReadAllText(Application.StartupPath+"\\record.txt");
         public Form1()
         {
             InitializeComponent();
             delent_box();// функция отвечающая за очистку поля от белых боксов
+            about = new About();
         }
 
         // перемешивание карточек 
@@ -93,28 +98,39 @@ namespace game_HOT
                 // одинковые 
                 if (cards_num1 == cards_num2)
                 {
-                    label1.Text = "find parse";
+                   
 
                     int del = number2;// номер элемента который надо удалить из массива
                     var query = box.Where(n => box.ElementAt(del) != n);
 
                     int del1 = number1;// номер элемента который надо удалить из массива
                     var query1 = box.Where(n => box.ElementAt(del1) != n);
-
+                    para -= 1;
+                    score += 5;
                     card1.Visible = false;
                     card2.Visible = false;
                 }
                 // закрытие
                 else
                 {
-                    label1.Text = "don't find parse";
+                    score -= 2;
                     Thread t2 = new Thread(delegate () { wait_close(2600,card1, cards_num1); });
                     t2.Start();
                     Thread t = new Thread(delegate () { wait_close(2600,card2, cards_num2); });
                     t.Start();
                 }
+                if(para==0)
+                {
+                    MessageBox.Show("Ваш счет: "+score);
+                }
                 check_open_card = 0;
-
+                label1.Text = score.ToString();
+                int a = Int32.Parse(record);
+                if(score>a)
+                {   string record2 = score.ToString();
+                    File.WriteAllText("C:\\Users\\Тимур\\Desktop\\game--master\\game--master\\record.txt", record2);
+                    label2.Text = record2;
+                }
             }
         }
         // обработчик кликов (не знаю зачем он тут, но лень удалять)
@@ -125,11 +141,6 @@ namespace game_HOT
                 Analogy(open, number);
 
             }
-            if (flip_card != true)
-            {
-                label3.Text = "wait!";
-            }
-
         }
         // Таймер + гифка открытия. Не лезь!!!! И так работает   
         public void wait_open(int milliseconds, PictureBox box, int number)
@@ -266,9 +277,36 @@ namespace game_HOT
         {
             clickAction(pictureBox17, 15);
         }
-        // поле из 16 карт
-        private void Button2_Click(object sender, EventArgs e)
+        // поле из 4 карт
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            para = 2;
+            label1.Text = "0";
+            score = 0;
+            delent_box();
+            box = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5 };
+            cards_number = new int[] { 1, 2, 1, 2 };
+            Back_Front();
+            shuffle_cards();
+        }
+        // поле из 8 карт
+        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            para = 4;
+            label1.Text = "0";
+            score = 0;
+            delent_box();
+            box = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
+            cards_number = new int[] { 1, 2, 3, 4, 1, 2, 3, 4 };
+            Back_Front();
+            shuffle_cards();
+        }
+        // поле из 16 карт
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            para = 8;
+            label1.Text = "0";
+            score = 0;
             delent_box();
             box = new PictureBox[] {pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11,
             pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17};
@@ -276,24 +314,34 @@ namespace game_HOT
             Back_Front();
             shuffle_cards();
         }
-        // поле из 8 карт
-        private void Button3_Click(object sender, EventArgs e)
+        // about
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            delent_box();
-            box = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
-            cards_number = new int[] { 1, 2, 3, 4, 1, 2, 3, 4 };
-            Back_Front();
-            shuffle_cards();
+            about = new About();
+            about.Show();
         }
-        // поле из 4 карт
-        private void Button4_Click(object sender, EventArgs e)
+        // таблица лидеров
+        private void ladderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            delent_box();
-            box = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5 };
-            cards_number = new int[] { 1, 2, 1, 2 };
-            Back_Front();
-            shuffle_cards();
+
         }
+        // exit
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label2.Text = record;
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
     
 }

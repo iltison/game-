@@ -18,3 +18,15 @@ D:\game HOT\game-\game HOT\obj\Debug\game HOT.csproj.GenerateResource.cache
 D:\game HOT\game-\game HOT\obj\Debug\game HOT.csproj.CoreCompileInputs.cache
 D:\game HOT\game-\game HOT\obj\Debug\game HOT.exe
 D:\game HOT\game-\game HOT\obj\Debug\game HOT.pdb
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\bin\Debug\game HOT.exe.config
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\bin\Debug\game HOT.exe
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\bin\Debug\game HOT.pdb
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game HOT.csprojAssemblyReference.cache
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game_HOT.Form1.resources
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game_HOT.Properties.Resources.resources
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game HOT.csproj.GenerateResource.cache
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game HOT.csproj.CoreCompileInputs.cache
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game HOT.exe
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game HOT.pdb
+C:\Users\Тимур\Desktop\game--master\game--master\game HOT\obj\Debug\game_HOT.About.resources
+D:\game HOT\game-\game HOT\obj\Debug\game_HOT.About.resources
