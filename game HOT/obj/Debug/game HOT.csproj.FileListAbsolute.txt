@@ -1,0 +1,20 @@
+D:\game HOT\game HOT\bin\Debug\game HOT.exe.config
+D:\game HOT\game HOT\bin\Debug\game HOT.exe
+D:\game HOT\game HOT\bin\Debug\game HOT.pdb
+D:\game HOT\game HOT\obj\Debug\game_HOT.Form1.resources
+D:\game HOT\game HOT\obj\Debug\game_HOT.Properties.Resources.resources
+D:\game HOT\game HOT\obj\Debug\game HOT.csproj.GenerateResource.cache
+D:\game HOT\game HOT\obj\Debug\game HOT.csproj.CoreCompileInputs.cache
+D:\game HOT\game HOT\obj\Debug\game HOT.exe
+D:\game HOT\game HOT\obj\Debug\game HOT.pdb
+D:\game HOT\game HOT\obj\Debug\game HOT.csprojAssemblyReference.cache
+D:\game HOT\game-\game HOT\bin\Debug\game HOT.exe.config
+D:\game HOT\game-\game HOT\bin\Debug\game HOT.exe
+D:\game HOT\game-\game HOT\bin\Debug\game HOT.pdb
+D:\game HOT\game-\game HOT\obj\Debug\game HOT.csprojAssemblyReference.cache
+D:\game HOT\game-\game HOT\obj\Debug\game_HOT.Form1.resources
+D:\game HOT\game-\game HOT\obj\Debug\game_HOT.Properties.Resources.resources
+D:\game HOT\game-\game HOT\obj\Debug\game HOT.csproj.GenerateResource.cache
+D:\game HOT\game-\game HOT\obj\Debug\game HOT.csproj.CoreCompileInputs.cache
+D:\game HOT\game-\game HOT\obj\Debug\game HOT.exe
+D:\game HOT\game-\game HOT\obj\Debug\game HOT.pdb
